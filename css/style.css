@@ -127,7 +127,7 @@ a:focus, a:hover {
 
 	.w3_navigation_pos {
 		position: absolute;
-		top: 15%;
+		top: 30px;
 		left: 0;
 		right: 0;
 		text-align: center;

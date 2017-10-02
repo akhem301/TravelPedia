@@ -41,6 +41,52 @@
 </head>
 <!-- //Head -->
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('./images/magnifier.svg');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 20%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 0px solid #000;
+  margin-bottom: 12px;
+  margin-left: 24px;
+  margin-top: 30px;
+}
+
+#myh1 {
+	color: #FFF;
+	padding-top: 100px;
+	margin-right: 1000px;
+}
+
+.newbtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 13px 32px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.newbtn:hover{
+    background-color: #3e8e49;
+}
+
+}
+
+}
+</style>
 
 
 <!-- Body -->
@@ -52,23 +98,14 @@
 	<div class="agileheader" id="agileitshome">
 
 		<!-- Navigation -->
-		<div class="w3lsnavigation">
+		<!-- <div class="w3lsnavigation"> -->
 			<nav class="navbar navbar-default agilehovereffect">
-				<div class="navbar-header navbar-left">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<div class="w3_navigation_pos">
-						<a href="index.html">
-							<img src="images/logo.png" alt="TravelPedia">
-							<h1>TravelPedia</h1>
-						</a>
-					</div>
+				<div class="w3_navigation_pos">
+					<a href="index.html">
+						<img src="images/logo.png" alt="TravelPedia">
+						<h1>TravelPedia</h1>
+					</a>
 				</div>
-
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="link-effect-2 wthreehovereffect" id="link-effect-2">
 						<ul class="nav navbar-nav">
@@ -82,652 +119,65 @@
 						</ul>
 					</nav>
 				</div>
+				<!-- search table -->
+				<div>
+					<h1 id="myh1">Search Tours</h1>
+                    <form action="#" method="post">
+                        <input style="border-radius: 8px;" type="text" list="destinations" id="myInput" placeholder="Destination" title="Type in a Place">
+                        <datalist id="destinations">
+                            <option value="Internet Explorer">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+
+                        <input style="border-radius: 8px;" type="text" list="days" id="myInput" placeholder="Number of days" title="Type in the number of days">
+                        <datalist id="days">
+                            <option value="Internet Explorer">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+
+                        <input style="border-radius: 8px;" type="text" list="budget" id="myInput" placeholder="Budget" title="Enter the budget">
+                        <datalist id="budget">
+                            <option value="Internet Explorer">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+
+                        <input style="border-radius: 8px;" type="text" list="theme" id="myInput" placeholder="Theme" title="Enter the theme">
+                        <datalist id="theme">
+                            <option value="Internet Explorer">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+                        <button class="newbtn" type="submit" value="Submit">Submit</button>
+                    </form>
+			  	</div>
+			  	<!-- end -->
 			</nav>
-		</div>
+		<!-- </div> -->
 		<!-- //Navigation -->
 
-		<!-- Slider -->
-		<div class="slider">
 			<ul class="rslides" id="slider">
-				<!-- <li class="first-slide w3ls">
-					<img src="images/slide-1.jpg" alt="TravelPedia">
-					<div class="wthreexperience"> -->
-						<!-- <div id="animated-example" class="animated fadeIn"></div> -->
-						<!-- <button onclick="myFunction()">Reload page</button>
-					</div>
-				</li> -->
-				 <!-- <li class="second-slide aits">
-					<img src="images/slide-2.jpg" alt="TravelPedia">
-					<div class="wthreexperience">
-						<div id="animated-example1" class="animated fadeIn"></div>
-						<button onclick="myFunction()">Reload page</button>
-					</div>
-				</li> -->
-				<!-- <li class="third-slide w3-agileits">
-					<img src="images/slide-3.jpg" alt="TravelPedia">
-					<div class="wthreexperience">
-						<div id="animated-example2" class="animated fadeIn"></div>
-						<button onclick="myFunction()">Reload page</button>
-					</div>
-				</li> -->
 				<li class="fourth-slide agileinfo">
 					<img src="images/slide-4.jpg" alt="TravelPedia">
 					<div class="wthreexperience">
+
 						<!-- <div id="animated-example3" class="animated fadeIn"></div> -->
-						<button onclick="myFunction()">Reload page</button>
 					</div>
 				</li>
-				<!--<li class="fifth-slide wthree">
-					<img src="images/slide-5.jpg" alt="TravelPedia">
-					<div class="wthreexperience">
-						<div id="animated-example4" class="animated fadeIn"></div>
-						<button onclick="myFunction()">Reload page</button>
-					</div>
-				</li> -->
 			</ul>
-		</div>
-		<!-- //Slider -->
 
 	</div>
 	<!-- //Header -->
-
-
-
-	<!-- About -->
-	<div class="w3lsaboutaits" id="w3lsaboutaits">
-		<div class="container">
-
-			<h2>About Our Agency</h2>
-			<h4>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h4>
-			<div class="w3lsaboutaits-grids">
-				<div class="col-md-6 w3lsaboutaits-grid w3lsaboutaits-grid-1">
-					<h3>The Lorem Ipsum</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<button class="btn btn-primary" data-toggle="modal" data-target="#myModal1">READ MORE<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-				</div>
-				<div class="col-md-6 w3lsaboutaits-grid w3lsaboutaits-grid-2">
-					<h3>Dolores Amet Elit <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<h3>Ad Minim Veniam <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<h3>Ea Commodo Consequat <span><i class="fa fa-angle-right" aria-hidden="true"></i></span></h3>
-					<p class="bottom-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-
-			<!-- Tooltip-Content -->
-			<div class="tooltip-content">
-				<div class="modal fade details-modal" id="myModal1" tabindex="-1" role="dialog" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-								<h4 class="modal-title">The Lorem Ipsum Dolores</h4>
-							</div>
-							<div class="modal-body">
-								<img src="images/about.jpg" alt="TravelPedia">
-								<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- //Tooltip-Content -->
-
-		</div>
-	</div>
-	<!-- //About -->
-
-
-
-	<!-- Details -->
-	<div class="agileinfodetails" id="agileinfodetails">
-		<div class="container">
-
-			<div class="col-md-12 agileinfodetails-grid agileinfodetails-heading">
-				<h3>Experience the Freedom</h3>
-			</div>
-			<div class="col-md-12 agileinfodetails-grid agileinfodetails-paragraph">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-			</div>
-			<div class="clearfix"></div>
-
-		</div>
-	</div>
-	<!-- //Details -->
-
-
-
-	<!-- Locations -->
-	<!-- <div class="wthreelocationsaits" id="wthreelocationsaits">
-		<div class="container">
-			<h3>Locations</h3>
-			<section class="grid3d vertical" id="grid3d">
-				<div class="grid-wrap">
-					<div class="grid">
-						<figure class="col-md-4 effect-zoe"><img src="images/location-1.jpg" alt="TravelPedia"><figcaption><h4>SWITZERLAND</h4></figcaption></figure>
-						<figure class="col-md-4 effect-zoe"><img src="images/location-2.jpg" alt="TravelPedia"><figcaption><h4>ITALY</h4></figcaption></figure>
-						<figure class="col-md-4 effect-zoe"><img src="images/location-3.jpg" alt="TravelPedia"><figcaption><h4>GERMANY</h4></figcaption></figure>
-						<figure class="col-md-4 effect-zoe"><img src="images/location-4.jpg" alt="TravelPedia"><figcaption><h4>FRANCE</h4></figcaption></figure>
-						<figure class="col-md-4 effect-zoe"><img src="images/location-5.jpg" alt="TravelPedia"><figcaption><h4>MONACO</h4></figcaption></figure>
-						<figure class="col-md-4 effect-zoe"><img src="images/location-6.jpg" alt="TravelPedia"><figcaption><h4>SPAIN</h4></figcaption></figure>
-						<figure class="col-md-4 effect-zoe"><img src="images/location-7.jpg" alt="TravelPedia"><figcaption><h4>NORWAY</h4></figcaption></figure>
-						<figure class="col-md-4 effect-zoe"><img src="images/location-8.jpg" alt="TravelPedia"><figcaption><h4>NETHERLANDS</h4></figcaption></figure>
-						<figure class="col-md-4 effect-zoe"><img src="images/location-9.jpg" alt="TravelPedia"><figcaption><h4>SWEDEN</h4></figcaption></figure>
-					</div>
-				</div>
-				<div class="content">
-					<div>
-						<div class="dummy-img dummy-img-1"><img src="images/location-1.jpg" alt="TravelPedia"></div>
-						<p class="dummy-text aitsheadingw3">SWITZERLAND</p>
-						<p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div>
-						<div class="dummy-img dummy-img-2"><img src="images/location-2.jpg" alt="TravelPedia"></div>
-						<p class="dummy-text aitsheadingw3">ITALY</p>
-						<p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div>
-						<div class="dummy-img dummy-img-3"><img src="images/location-3.jpg" alt="TravelPedia"></div>
-						<p class="dummy-text aitsheadingw3">GERMANY</p>
-						<p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div>
-						<div class="dummy-img dummy-img-4"><img src="images/location-4.jpg" alt="TravelPedia"></div>
-						<p class="dummy-text aitsheadingw3">FRANCE</p>
-						<p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div>
-						<div class="dummy-img dummy-img-5"><img src="images/location-5.jpg" alt="TravelPedia"></div>
-						<p class="dummy-text aitsheadingw3">MONACO</p>
-						<p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div>
-						<div class="dummy-img dummy-img-6"><img src="images/location-6.jpg" alt="TravelPedia"></div>
-						<p class="dummy-text aitsheadingw3">SPAIN</p>
-						<p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div>
-						<div class="dummy-img dummy-img-7"><img src="images/location-7.jpg" alt="TravelPedia"></div>
-						<p class="dummy-text aitsheadingw3">NORWAY</p>
-						<p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div>
-						<div class="dummy-img dummy-img-8"><img src="images/location-8.jpg" alt="TravelPedia"></div>
-						<p class="dummy-text aitsheadingw3">NETHERLANDS</p>
-						<p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<div>
-						<div class="dummy-img dummy-img-9"><img src="images/location-9.jpg" alt="TravelPedia"></div>
-						<p class="dummy-text aitsheadingw3">SWEDEN</p>
-						<p class="dummy-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-					<span class="loading"></span>
-					<span class="icon close-content"><i class="fa fa-times" aria-hidden="true"></i></span>
-				</div>
-			</section>
-		</div>
-	</div>
-	<!-- //Locations -->
-
-
-
-	<!-- Packages -->
-	<!-- <div class="agilepackagesw3l" id="agilepackagesw3l">
-		<div class="container">
-
-			<h3>Packages</h3>
-
-			<div id="owl-demo" class="owl-carousel text-center">
-				<div class="item w3-agile">
-					<div class="agilegrid agilegrid1">
-						<img src="images/package-1.jpg" alt="TravelPedia">
-						<h4>THE PERFECT ROAD TRIP</h4>
-						<h5>€1300</h5>
-						<ul>
-							<li>5 Countries</li>
-							<li>9 Days, 8 Nights</li>
-							<li>Choose your Vehicle:</li>
-							<li>Car, SUV, Bus, RV</li>
-						</ul>
-						<div class="sign w3-agile text-center">
-							<a class="popup-with-zoom-anim" href="#small-dialog">BOOK NOW</a>
-						</div>
-					</div>
-				</div>
-				<div class="item w3-agile">
-					<div class="agilegrid agilegrid2">
-						<img src="images/package-2.jpg" alt="TravelPedia">
-						<h4>INTO THE WOODS</h4>
-						<h5>€900</h5>
-						<ul>
-							<li>2 Countries</li>
-							<li>5 Days, 4 Nights</li>
-							<li>Backpacking & Rock Climbing</li>
-							<li>Lakeside Campsites</li>
-						</ul>
-						<div class="sign w3-agile text-center">
-							<a class="popup-with-zoom-anim" href="#small-dialog">BOOK NOW</a>
-						</div>
-					</div>
-				</div>
-				<div class="item w3-agile">
-					<div class="agilegrid agilegrid3">
-						<img src="images/package-3.jpg" alt="TravelPedia">
-						<h4>SKY IS THE LIMIT</h4>
-						<h5>€1000</h5>
-						<ul>
-							<li>2 Countries</li>
-							<li>4 Days, 4 Nights</li>
-							<li>Trekking & Skiing</li>
-							<li>Summit Campsites</li>
-						</ul>
-						<div class="sign w3-agile text-center">
-							<a class="popup-with-zoom-anim" href="#small-dialog">BOOK NOW</a>
-						</div>
-					</div>
-				</div>
-				<div class="item w3-agile">
-					<div class="agilegrid agilegrid4">
-						<img src="images/package-4.jpg" alt="TravelPedia">
-						<h4>THE FLOATING FORTRESS</h4>
-						<h5>€2500</h5>
-						<ul>
-							<li>9 Countries</li>
-							<li>28 Days, 29 Nights</li>
-							<li>Casinos, Musical Nights</li>
-							<li>Beach Resorts</li>
-						</ul>
-						<div class="sign w3-agile text-center">
-							<a class="popup-with-zoom-anim" href="#small-dialog">BOOK NOW</a>
-						</div>
-					</div>
-				</div>
-				<div class="item w3-agile">
-					<div class="agilegrid agilegrid5">
-						<img src="images/package-5.jpg" alt="TravelPedia">
-						<h4>LIFE'S A BEACH</h4>
-						<h5>€2900</h5>
-						<ul>
-							<li>9 Countries</li>
-							<li>18 Days, 17 Nights</li>
-							<li>Surfing, Jet ski, Hang Gliding</li>
-							<li>Beach Resorts</li>
-						</ul>
-						<div class="sign w3-agile text-center">
-							<a class="popup-with-zoom-anim" href="#small-dialog">BOOK NOW</a>
-						</div>
-					</div>
-				</div>
-				<div class="item w3-agile">
-					<div class="agilegrid agilegrid6">
-						<img src="images/package-6.jpg" alt="TravelPedia">
-						<h4>URBAN SAFARI</h4>
-						<h5>€3500</h5>
-						<ul>
-							<li>7 Countries</li>
-							<li>25 Days, 26 Nights</li>
-							<li>Cities, Alps Countryside</li>
-							<li>5 Star Hotels</li>
-						</ul>
-						<div class="sign w3-agile text-center">
-							<a class="popup-with-zoom-anim" href="#small-dialog">BOOK NOW</a>
-						</div>
-					</div>
-				</div>
-				<div class="item w3-agile">
-					<div class="agilegrid agilegrid7">
-						<img src="images/package-7.jpg" alt="TravelPedia">
-						<h4>JUNGLE SAFARI</h4>
-						<h5>€1500</h5>
-						<ul>
-							<li>2 Countries</li>
-							<li>5 Days, 6 Nights</li>
-							<li>Wildlife Sanctuaries</li>
-							<li>Lakeside Campsites</li>
-						</ul>
-						<div class="sign w3-agile text-center">
-							<a class="popup-with-zoom-anim" href="#small-dialog">BOOK NOW</a>
-						</div>
-					</div>
-				</div>
-				<div class="item w3-agile">
-					<div class="agilegrid agilegrid8">
-						<img src="images/package-8.jpg" alt="TravelPedia">
-						<h4>OFFROAD EXPEDITION</h4>
-						<h5>€2500</h5>
-						<ul>
-							<li>3 Countries</li>
-							<li>9 Days, 9 Nights</li>
-							<li>Alps Mountain Pass, Forests</li>
-							<li>Lakeside Campsites</li>
-						</ul>
-						<div class="sign w3-agile text-center">
-							<a class="popup-with-zoom-anim" href="#small-dialog">BOOK NOW</a>
-						</div>
-					</div>
-				</div>
-			</div> -->
-
-			<!-- Popup-Box -->
-			<div id="popup">
-				<div id="small-dialog" class="mfp-hide agileinfo">
-					<div class="pop_up">
-						<div class="payment-online-form-left w3-agileits">
-							<form action="#" method="post">
-								<h4><span class="shipping agileits-w3layouts"></span>Customer Details</h4>
-								<ul>
-									<li><input class="text-box-dark agileits-w3layouts" type="text" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"></li>
-									<li><input class="text-box-dark agileits" type="text" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></li>
-								</ul>
-								<ul>
-									<li><input class="text-box-dark agile" type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"></li>
-									<li><input class="text-box-dark" type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}"></li>
-								</ul>
-								<div class="clear"></div>
-								<h4 class="paymenthead"><span class="payment"></span>Payment Details</h4>
-								<div class="clear"></div>
-								<ul class="payment-type">
-									<li><span class="col_checkbox agileits-w3layouts">
-											<input id="3" class="css-checkbox1" type="checkbox">
-											<label for="3" class="css-label1"></label>
-											<a class="visa agileits-w3layouts" href="#"></a>
-										</span>
-									</li>
-									<li>
-										<span class="col_checkbox">
-											<input id="4" class="css-checkbox2" type="checkbox">
-											<label for="4" class="css-label2"></label>
-											<a class="paypal w3-agileits" href="#"></a>
-										</span>
-									</li>
-								</ul>
-								<ul>
-									<li><input class="text-box-dark" type="text" value="Card Number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Card Number';}"></li>
-									<li><input class="text-box-dark w3layouts" type="text" value="Name on card" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name on card';}"></li>
-								</ul>
-								<ul>
-									<li><input class="text-box-light hasDatepicker" type="text" id="datepicker" value="Expiration Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Expiration Date';}"><em class="pay-date"> </em></li>
-									<li><input class="text-box-dark agileits-w3layouts" type="text" value="CVV" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'CVV';}"></li>
-								</ul>
-								<ul class="payment-sendbtns">
-									<li><input type="reset" value="Reset"></li>
-									<li><input type="submit" name="Process Order" value="Process Order"></li>
-								</ul>
-								<div class="clear agile"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			<button title="Close (Esc)" type="button" class="mfp-close w3-agileits">×</button>
-			<!-- //Popup-Box -->
-
-		</div>
-	</div>
-	<!-- //Packages -->
-
-
-
-	<!-- Portfolio -->
-	<!-- <div class="w3portfolioaits" id="w3portfolioaits">
-		<h3>Portfolio</h3>
-
-		<div class="w3portfolioaits-items">
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-1">
-				<a class="example-image-link" href="images/portfolio-1.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-1.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-2">
-				<a class="example-image-link" href="images/portfolio-2.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-2.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-3">
-				<a class="example-image-link" href="images/portfolio-3.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-3.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-4">
-				<a class="example-image-link" href="images/portfolio-4.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-4.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-5">
-				<a class="example-image-link" href="images/portfolio-5.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-5.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-6">
-				<a class="example-image-link" href="images/portfolio-6.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-6.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-7">
-				<a class="example-image-link" href="images/portfolio-7.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-7.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-8">
-				<a class="example-image-link" href="images/portfolio-8.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-8.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-9">
-				<a class="example-image-link" href="images/portfolio-9.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-9.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-9">
-				<a class="example-image-link" href="images/portfolio-10.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-10.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-9">
-				<a class="example-image-link" href="images/portfolio-11.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-11.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-3 w3portfolioaits-item w3portfolioaits-item-9">
-				<a class="example-image-link" href="images/portfolio-12.jpg" data-lightbox="example-set" data-title="">
-					<div class="grid">
-						<figure class="effect-apollo">
-							<img src="images/portfolio-12.jpg" alt="Game Robo">
-								<figcaption></figcaption>
-						</figure>
-					</div>
-				</a>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-
-	</div> -->
-	<!-- //Portfolio -->
-
-
-
-	<!-- Reviews -->
-	<!-- <div class="wthreereviews" id="wthreereviews">
-		<main>
-			<div class="cd-image-block">
-				<ul class="cd-images-list">
-					<li class="is-selected agiletravelerw3ls agiletravelerw3ls1">
-						<a href="#0">
-							<h3>I've had the time of my life!</h3>
-							<img src="images/opinion-1.jpg" alt="TravelPedia">
-							<h4>Jane Foster</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<div class="wthreeratingaits">
-								<ul>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								</ul>
-							</div>
-						</a>
-					</li>
-
-					<li class="agiletravelerw3ls agiletravelerw3ls2">
-						<a href="#0">
-							<h3>I don't want to go home...</h3>
-							<img src="images/opinion-2.jpg" alt="TravelPedia">
-							<h4>Darth Vader</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<div class="wthreeratingaits">
-								<ul>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
-								</ul>
-							</div>
-						</a>
-					</li>
-
-					<li class="agiletravelerw3ls agiletravelerw3ls3">
-						<a href="#0">
-							<h3>Most amazing moments!</h3>
-							<img src="images/opinion-3.jpg" alt="TravelPedia">
-							<h4>James Kirk</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<div class="wthreeratingaits">
-								<ul>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
-								</ul>
-							</div>
-						</a>
-					</li>
-
-					<li class="agiletravelerw3ls agiletravelerw3ls4">
-						<a href="#0">
-							<h3>Unforgettable experience!</h3>
-							<img src="images/opinion-4.jpg" alt="TravelPedia">
-							<h4>Ellen Ripley</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<div class="wthreeratingaits">
-								<ul>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-									<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								</ul>
-							</div>
-						</a>
-					</li>
-					<div class="clearfix"></div>
-				</ul>
-			</div>
-
-			<div class="cd-content-block">
-				<ul>
-					<li class="is-selected wthreeli wthreeli-1"></li>
-
-					<li class="wthreeli wthreeli-2"></li>
-
-					<li class="wthreeli wthreeli-3"></li>
-
-					<li class="wthreeli wthreeli-4"></li>
-				</ul>
-
-				<button class="cd-close">Close</button>
-			</div>
-
-			<ul class="block-navigation">
-				<li><button class="cd-prev inactive">&larr; Prev</button></li>
-				<li><button class="cd-next">Next &rarr;</button></li>
-			</ul>
-		</main>
-	</div>  -->
-	<!-- //Reviews -->
-
-
-
-	<!-- Contact -->
-	<!-- <div class="agilecontactw3ls" id="agilecontactw3ls">
-		<div class="container">
-			<h3>Contact</h3>
-			<form action="#" method="post">
-				<div class="col-md-6 agilecontactw3ls-grid agilecontactw3ls-grid-1">
-					<input type="text" Name="First Name" placeholder="FIRST NAME" required="">
-					<input type="text" Name="Last Name" placeholder="LAST NAME" required="">
-					<input type="email" Name="Email" placeholder="EMAIL" required="">
-				</div>
-				<div class="col-md-6 agilecontactw3ls-grid agilecontactw3ls-grid-2">
-					<textarea name="Message" placeholder="MESSAGE" required=""></textarea>
-					<div class="send-button">
-						<input type="submit" value="SEND">
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</form>
-		</div>
-	</div> -->
-	<!-- //Contact -->
 
 
 
@@ -809,6 +259,36 @@
 
 
 	<!-- Custom-JavaScript-File-Links -->
+
+	<!-- Table Searching javascript -->
+
+	<script>
+	function myFunction()
+	{
+		var input, filter, table, tr, td, i;
+		input = document.getElementById("myInput");
+		filter = input.value.toUpperCase();
+		table = document.getElementById("myTable");
+		tr = table.getElementsByTagName("tr");
+		for (i = 0; i < tr.length; i++)
+		{
+			td = tr[i].getElementsByTagName("td")[0];
+			if (td)
+			{
+				if (td.innerHTML.toUpperCase().indexOf(filter) > -1)
+				{
+					tr[i].style.display = "";
+				}
+				else
+				{
+					tr[i].style.display = "none";
+				}
+			}
+		}
+	}
+	</script>
+
+	<!-- end -->
 
 	<!-- Default-JavaScript -->   <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<!-- Bootstrap-JavaScript --> <script type="text/javascript" src="js/bootstrap.js"></script>
