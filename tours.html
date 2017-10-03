@@ -17,11 +17,11 @@
 <!-- //Meta-Tags -->
 
 <!-- Custom-Stylesheet-Links -->
-<!-- Bootstrap-CSS -->	  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="all">
-<!-- Index-Page-CSS -->	  <link rel="stylesheet" href="css/style.css"		  type="text/css" media="all">
-<!-- Owl-Carousel-CSS --> <link rel="stylesheet" href="css/owl.carousel.css"  type="text/css" media="all">
-<!-- Date-Picker-CSS -->  <link rel="stylesheet" href="css/jquery-ui.css"	  type="text/css" media="all">
-<!-- Chocolat-CSS -->	  <link rel="stylesheet" href="css/chocolat.css"	  type="text/css" media="all">
+<!-- Bootstrap-CSS -->	  <link rel="stylesheet" href="public/css/bootstrap.css" type="text/css" media="all">
+<!-- Index-Page-CSS -->	  <link rel="stylesheet" href="public/css/style.css"		  type="text/css" media="all">
+<!-- Owl-Carousel-CSS --> <link rel="stylesheet" href="public/css/owl.carousel.css"  type="text/css" media="all">
+<!-- Date-Picker-CSS -->  <link rel="stylesheet" href="public/css/jquery-ui.css"	  type="text/css" media="all">
+<!-- Chocolat-CSS -->	  <link rel="stylesheet" href="public/css/chocolat.css"	  type="text/css" media="all">
 <!-- //Custom-Stylesheet-Links -->
 
 <!-- Fonts -->
@@ -30,7 +30,7 @@
 <!-- //Fonts -->
 
 <!-- Font-Awesome-File-Links -->
-<!-- CSS --> <link rel="stylesheet" href="css/font-awesome.css" 	 type="text/css" media="all">
+<!-- CSS --> <link rel="stylesheet" href="public/css/font-awesome.css" 	 type="text/css" media="all">
 <!-- TTF --> <link rel="stylesheet" href="fonts/fontawesome-webfont.ttf" type="text/css" media="all">
 <!-- //Font-Awesome-File-Links -->
 
@@ -47,7 +47,6 @@
 }
 
 #myInput {
-  background-image: url('./images/magnifier.svg');
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 20%;
@@ -101,8 +100,8 @@
 		<!-- <div class="w3lsnavigation"> -->
 			<nav class="navbar navbar-default agilehovereffect">
 				<div class="w3_navigation_pos">
-					<a href="index.html">
-						<img src="images/logo.png" alt="TravelPedia">
+					<a href="index">
+						<img src="public/images/logo.png" alt="TravelPedia">
 						<h1>TravelPedia</h1>
 					</a>
 				</div>
@@ -112,7 +111,7 @@
 							<li><a class="scroll" href="#w3lsaboutaits"><span>ABOUT</span></a></li>
 							<li><a class="scroll" href="#wthreelocationsaits"><span>LOCATIONS</span></a></li>
 							<li><a class="scroll" href="#agilepackagesw3l"><span>PACKAGES</span></a></li>
-							<li><a class="scroll" href="#w3portfolioaits"><span>TOURS</span></a></li>
+							<li><a href="searchtours"><span>TOURS</span></a></li>
 							<li><a class="scroll" href="#wthreereviews"><span>REVIEWS</span></a></li>
 							<li><a class="scroll" href="#agilecontactw3ls"><span>CONTACT</span></a></li>
 							<li><a class="scroll" href="#agilecontactw3ls"><span>LOG IN</span></a></li>
@@ -122,7 +121,7 @@
 				<!-- search table -->
 				<div>
 					<h1 id="myh1">Search Tours</h1>
-                    <form action="#" method="post">
+                    <form action="http://127.0.0.1:8080/myaction" method="post">
                         <input style="border-radius: 8px;" type="text" list="destinations" id="myInput" placeholder="Destination" title="Type in a Place">
                         <datalist id="destinations">
                             <option value="Internet Explorer">
@@ -168,7 +167,7 @@
 
 			<ul class="rslides" id="slider">
 				<li class="fourth-slide agileinfo">
-					<img src="images/slide-4.jpg" alt="TravelPedia">
+					<img src="public/images/slide-4.jpg" alt="TravelPedia">
 					<div class="wthreexperience">
 
 						<!-- <div id="animated-example3" class="animated fadeIn"></div> -->
