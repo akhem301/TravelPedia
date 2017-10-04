@@ -10,13 +10,26 @@
     "type": "git",
     "url": "git+https://github.com/akhem301/TravelPedia.git"
   },
-  "author": "",
+  "author": "Akshay Maheshwari",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/akhem301/TravelPedia/issues"
   },
   "homepage": "https://github.com/akhem301/TravelPedia#readme",
   "dependencies": {
-    "express": "^4.16.1"
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
   }
 }
