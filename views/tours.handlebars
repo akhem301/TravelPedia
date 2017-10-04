@@ -28,7 +28,11 @@
 						<li><a href="/tours"><span>TOURS</span></a></li>
 						<li><a class="scroll" href="#wthreereviews"><span>REVIEWS</span></a></li>
 						<li><a class="scroll" href="#agilecontactw3ls"><span>CONTACT</span></a></li>
+						{{#if user}}
+						<li><a href="users/logout"><span>LOG OUT</span></a></li>
+						{{else}}
 						<li><a href="users/login"><span>LOG IN</span></a></li>
+						{{/if}}
 					</ul>
 				</nav>
 			</div>

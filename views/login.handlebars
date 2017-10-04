@@ -33,15 +33,29 @@
 			</div>
 
             <!-- Login part -->
-            <div class="col-sm-12">
-                <!-- <div style="display:inline"> -->
-                    <h1 style="display: inline-block; margin-right: 600px;" id="myh1">Account Login</h1>
-                    <h4 style="display: inline-block; " id="myh4">Do not have an account?</h4>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="/users/register" class="newbtn3">Register</a>
-
-                <!-- </div> -->
+            <div class="container">
+                <h1 style="display: inline-block; margin-right: 480px;" id="myh1">Account Login</h1>
+                <h4 style="display: inline-block; " id="myh4">Do not have an account?</h4>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/users/register" class="newbtn3">Register</a>
                 <hr style="width: 100%; margin-top: 0px;"/>
+
+                <!-- checing for flash message -->
+
+                  {{#if success_msg}}
+                  <div class="alert alert-success" style="width: 30%;">{{success_msg}}</div>
+                  {{/if}}
+
+                  {{#if error_msg}}
+                    <div class="alert alert-danger" style="width: 30%;">{{error_msg}}</div>
+                  {{/if}}
+
+                  {{#if error}}
+                    <div class="alert alert-danger" style="width: 30%;">{{error}}</div>
+                  {{/if}}
+
+                <!-- //end -->
+
                 <form method="post" action="/users/login">
                   <div class="form-group">
                     <h4 id="myh4">Username</h3>

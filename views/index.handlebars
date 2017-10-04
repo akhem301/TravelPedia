@@ -27,7 +27,11 @@
 						<li><a href="tours"><span>TOURS</span></a></li>
 						<li><a class="scroll" href="#wthreereviews"><span>REVIEWS</span></a></li>
 						<li><a class="scroll" href="#agilecontactw3ls"><span>CONTACT</span></a></li>
+						{{#if user}}
+						<li><a href="users/logout"><span>LOG OUT</span></a></li>
+						{{else}}
 						<li><a href="users/login"><span>LOG IN</span></a></li>
+						{{/if}}
 					</ul>
 				</nav>
 			</div>
@@ -39,6 +43,23 @@
             <li class="first-slide w3ls">
                 <img src="images/slide-1.jpg" alt="TravelPedia">
                 <div class="wthreexperience">
+
+					<!-- checking for flash message -->
+
+				    {{#if success_msg}}
+				    <div class="alert alert-success" style="width: 20%;">{{success_msg}}</div>
+				    {{/if}}
+
+				    {{#if error_msg}}
+					<div class="alert alert-danger" style="width: 20%;">{{error_msg}}</div>
+				    {{/if}}
+
+				    {{#if error}}
+					<div class="alert alert-danger" style="width: 20%;">{{error}}</div>
+				    {{/if}}
+
+					<!-- //end -->
+
                     <div id="animated-example" class="animated fadeIn"></div>
                     <!-- <button onclick="myFunction()">Reload page</button> -->
                 </div>
