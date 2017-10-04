@@ -1,96 +1,54 @@
 
 <!-- Header -->
 <div class="col-sm-12 agileheader" id="agileitshome">
-	<!-- Navigation -->
-	<div class="w3lsnavigation">
-		<nav class="navbar navbar-default agilehovereffect">
-			<div class="navbar-header navbar-left">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<div class="w3_navigation_pos">
-					<a href="/">
-						<img src="/images/logo.png" alt="TravelPedia">
-						<h1 style="font-size:40px; font-weight:bold;">TravelPedia</h1>
-					</a>
-				</div>
-			</div>
-
-			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-				<nav class="link-effect-2 wthreehovereffect" id="link-effect-2">
-					<ul class="nav navbar-nav">
-						<li><a class="scroll" href="/#w3lsaboutaits"><span>ABOUT</span></a></li>
-						<li><a class="scroll" href="#wthreelocationsaits"><span>LOCATIONS</span></a></li>
-						<li><a class="scroll" href="#agilepackagesw3l"><span>PACKAGES</span></a></li>
-						<li><a href="/tours"><span>TOURS</span></a></li>
-						<li><a class="scroll" href="#wthreereviews"><span>REVIEWS</span></a></li>
-						<li><a class="scroll" href="#agilecontactw3ls"><span>CONTACT</span></a></li>
-						{{#if user}}
-						<li><a href="users/logout"><span>LOG OUT</span></a></li>
-						{{else}}
-						<li><a href="users/login"><span>LOG IN</span></a></li>
-						{{/if}}
-					</ul>
-				</nav>
-			</div>
-
-            <!-- search table -->
-            <div>
-                <h1 id="myh1" style="margin-left: 28px;">Search Tours</h1>
-                <form action="http://127.0.0.1:3000/" method="post">
-                    <input style="border-radius: 8px;" type="text" list="destinations" id="myInput" placeholder="Destination" title="Type in a Place">
-                    <datalist id="destinations">
-                        <option value="Internet Explorer">
-                        <option value="Firefox">
-                        <option value="Chrome">
-                        <option value="Opera">
-                        <option value="Safari">
-                    </datalist>
-
-                    <input style="border-radius: 8px;" type="text" list="days" id="myInput" placeholder="Number of days" title="Type in the number of days">
-                    <datalist id="days">
-                        <option value="Internet Explorer">
-                        <option value="Firefox">
-                        <option value="Chrome">
-                        <option value="Opera">
-                        <option value="Safari">
-                    </datalist>
-
-                    <input style="border-radius: 8px;" type="text" list="budget" id="myInput" placeholder="Budget" title="Enter the budget">
-                    <datalist id="budget">
-                        <option value="Internet Explorer">
-                        <option value="Firefox">
-                        <option value="Chrome">
-                        <option value="Opera">
-                        <option value="Safari">
-                    </datalist>
-
-                    <input style="border-radius: 8px;" type="text" list="theme" id="myInput" placeholder="Theme" title="Enter the theme">
-                    <datalist id="theme">
-                        <option value="Internet Explorer">
-                        <option value="Firefox">
-                        <option value="Chrome">
-                        <option value="Opera">
-                        <option value="Safari">
-                    </datalist>
-                    <button class="newbtn" type="submit" value="Submit">Submit</button>
-                </form>
-            </div>
-            <!-- end -->
-		</nav>
-	</div>
-	<!-- //Navigation -->
 
     <!-- Slider -->
         <ul class="rslides" id="slider">
             <li class="first-slide w3ls">
                 <img src="/images/slide-4.jpg" alt="TravelPedia">
-                <div class="wthreexperience">
-                    <!-- <div id="animated-example" class="animated fadeIn"></div> -->
-                    <!-- <button onclick="myFunction()">Reload page</button> -->
+					<!-- search table -->
+		            <div class="col-sm-12" style="position: absolute; margin-top: 150px;">
+		                <h1 id="myh1" style="margin-left: 28px;">Search Tours</h1>
+		                <form action="http://127.0.0.1:3000/" method="post">
+		                    <input style="border-radius: 8px;" type="text" list="destinations" id="myInput" placeholder="Destination" title="Type in a Place">
+		                    <datalist id="destinations">
+		                        <option value="Internet Explorer">
+		                        <option value="Firefox">
+		                        <option value="Chrome">
+		                        <option value="Opera">
+		                        <option value="Safari">
+		                    </datalist>
+
+		                    <input style="border-radius: 8px;" type="text" list="days" id="myInput" placeholder="Number of days" title="Type in the number of days">
+		                    <datalist id="days">
+		                        <option value="Internet Explorer">
+		                        <option value="Firefox">
+		                        <option value="Chrome">
+		                        <option value="Opera">
+		                        <option value="Safari">
+		                    </datalist>
+
+		                    <input style="border-radius: 8px;" type="text" list="budget" id="myInput" placeholder="Budget" title="Enter the budget">
+		                    <datalist id="budget">
+		                        <option value="Internet Explorer">
+		                        <option value="Firefox">
+		                        <option value="Chrome">
+		                        <option value="Opera">
+		                        <option value="Safari">
+		                    </datalist>
+
+		                    <input style="border-radius: 8px;" type="text" list="theme" id="myInput" placeholder="Theme" title="Enter the theme">
+		                    <datalist id="theme">
+		                        <option value="Internet Explorer">
+		                        <option value="Firefox">
+		                        <option value="Chrome">
+		                        <option value="Opera">
+		                        <option value="Safari">
+		                    </datalist>
+		                    <button class="newbtn" type="submit" value="Submit">Submit</button>
+		                </form>
+		            </div>
+		            <!-- end -->
                 </div>
             </li>
         </ul>
