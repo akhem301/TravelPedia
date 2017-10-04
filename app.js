@@ -79,6 +79,7 @@ app.use(function (req, res, next) {
 app.use('/', routes);
 app.use('/users', users);
 app.use('/tours', tours);
+app.use('/users/tours', tours);
 // app.use(function(req, res, next) {
 //     var err = new Error('Not Found');
 //     err.status = 404;
