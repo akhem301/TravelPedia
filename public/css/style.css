@@ -451,9 +451,9 @@ a:focus, a:hover {
 		animation-name: fadeIn;
 	}
 
-	.slider button {
+	/*.slider button {
 		display: none;
-	}
+	}*/
 
 	/*-- //Fading-Image --*/
 
@@ -715,8 +715,8 @@ h4.modal-title {
 /*-- Locations --*/
 
 .wthreelocationsaits {
-	background-color: #F5F5F5;
-	padding: 100px 0;
+	/*background-color: #FFF;*/
+	padding: 200px 0;
 }
 
 .wthreelocationsaits h3, .agilepackagesw3l h3, .w3portfolioaits h3, .agilecontactw3ls h3 {
@@ -1055,7 +1055,7 @@ h4.modal-title {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
+	transition: transform 1.2s;
 }
 
 .wthreelocationsaits figure.effect-zoe:hover h4 {
@@ -1680,8 +1680,9 @@ a.popup-with-zoom-anim:hover {
 	float: left;
 	overflow: hidden;
 	height: auto;
-	background: #000;
+	/*background: #000;*/
 	text-align: center;
+	margin: 0;
 }
 
 .grid figure img {

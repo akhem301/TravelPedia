@@ -1,56 +1,52 @@
 
-<!-- Header -->
-<div class="col-sm-12 agileheader" id="agileitshome">
-
     <!-- Slider -->
+    <div class="slider">
         <ul class="rslides" id="slider">
             <li class="first-slide w3ls">
                 <img src="/images/slide-4.jpg" alt="TravelPedia">
 					<!-- search table -->
-		            <div class="col-sm-12" style="position: absolute; margin-top: 150px;">
+		            <div class="col-sm-12" style="height: 100px; position: absolute; margin-top: 150px;">
 		                <h1 id="myh1" style="margin-left: 28px;">Search Tours</h1>
-		                <form action="http://127.0.0.1:3000/" method="post">
-		                    <input style="border-radius: 8px;" type="text" list="destinations" id="myInput" placeholder="Destination" title="Type in a Place">
-		                    <datalist id="destinations">
-		                        <option value="Internet Explorer">
-		                        <option value="Firefox">
-		                        <option value="Chrome">
-		                        <option value="Opera">
-		                        <option value="Safari">
-		                    </datalist>
+						<form method="post" action="/tours">
+		                  <div class="col-sm-12">
+		                    <!-- <h4 id="myh4">Username</h3> -->
+		                    <input id="inpbox" type="text" class="form-control" name="destination" placeholder="Destination">
 
-		                    <input style="border-radius: 8px;" type="text" list="days" id="myInput" placeholder="Number of days" title="Type in the number of days">
-		                    <datalist id="days">
-		                        <option value="Internet Explorer">
-		                        <option value="Firefox">
-		                        <option value="Chrome">
-		                        <option value="Opera">
-		                        <option value="Safari">
-		                    </datalist>
+		                    <!-- <h4 id="myh4">Password</h4> -->
+		                    <input id="inpbox" type="text" class="form-control" name="days" placeholder="Number of days">
 
-		                    <input style="border-radius: 8px;" type="text" list="budget" id="myInput" placeholder="Budget" title="Enter the budget">
-		                    <datalist id="budget">
-		                        <option value="Internet Explorer">
-		                        <option value="Firefox">
-		                        <option value="Chrome">
-		                        <option value="Opera">
-		                        <option value="Safari">
-		                    </datalist>
+							<input id="inpbox" type="text" class="form-control" name="budget" placeholder="Budget">
 
-		                    <input style="border-radius: 8px;" type="text" list="theme" id="myInput" placeholder="Theme" title="Enter the theme">
-		                    <datalist id="theme">
-		                        <option value="Internet Explorer">
-		                        <option value="Firefox">
-		                        <option value="Chrome">
-		                        <option value="Opera">
-		                        <option value="Safari">
-		                    </datalist>
-		                    <button class="newbtn" type="submit" value="Submit">Submit</button>
+		                    <!-- <h4 id="myh4">Password</h4> -->
+		                    <input id="inpbox" type="text" class="form-control" name="theme" placeholder="Theme">
+
+		                  	<button type="submit" class="newbtn2">Submit</button>
+						</div>
 		                </form>
 		            </div>
 		            <!-- end -->
+
+					<!-- Display tours if any -->
+					{{#if tour}}
+					<div class="col-sm-12 wthreelocationsaits" style="height: 100px; position: absolute; margin-top: 170px;">
+						<div class="container" style="height" >
+							<h4 id="myh3">Results</h4>
+							<div class="grid" style="margin-top: 60px;">
+								{{#each tour}}
+								<figure class="col-md-4 effect-zoe"><img src="images/location-1.jpg" alt="TravelPedia">
+									<figcaption><h4>{{this.destination}}</h4></figcaption>
+								</figure>
+								{{/each}}
+							</div>
+						</div>
+					</div>
+
+					{{/if}}
+
+					<!-- //end -->
                 </div>
             </li>
         </ul>
+    </div>
     <!-- //Slider -->
 </div>

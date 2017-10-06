@@ -11,9 +11,14 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/travelpedia', {
+// MLAB
+mongoose.connect('mongodb://akhem301:1234567@ds161194.mlab.com:61194/travelpedia', {
 	useMongoClient: true,
 });
+
+// mongoose.connect('mongodb://localhost/travelpedia', {
+// 	useMongoClient: true,
+// });
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
@@ -86,7 +91,7 @@ app.use('/users/tours', tours);
 //     next(err);
 // });
 // Set Port
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT));
 
 app.listen(app.get('port'), function(){
 	console.log('Server started on port '+app.get('port'));

@@ -75,11 +75,29 @@
 	/*margin-right: 1170px;*/
     text-align: left;
 }
-
+#myh3 {
+	color: #FFF;
+    /*font-weight: bold;*/
+    /*font-size: 50px;*/
+	padding-top: 10px;
+    padding-bottom: 10px;
+	/*margin-right: 1170px;*/
+    text-align: left;
+    margin-left: -70px;
+    margin-top: 20px;
+}
 #logopos {
     margin-left: 500px;
 }
 
+#inpbox {
+    width:20%;
+    height: 47px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 20px;
+}
 .newbtn {
     background-color: #4CAF50;
     border: none;
@@ -143,46 +161,46 @@
 
 <!-- Body -->
 <body>
-    <div class="row" >
+    <div class="agileheader" id="agileitshome">
+        <div class="w3lsnavigation">
+            <nav class="navbar navbar-default agilehovereffect">
+    			<div class="navbar-header navbar-left">
+    				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    					<span class="sr-only">Toggle navigation</span>
+    					<span class="icon-bar"></span>
+    				    <span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+    				</button>
+                    <div class="w3_navigation_pos">
+                        <a href="/">
+                            <img src="/images/logo.png" alt="TravelPedia">
+                            <h1 style="font-size:40px; font-weight:bold;">TravelPedia</h1>
+                        </a>
+                    </div>
+    			</div>
 
-        <nav class="navbar navbar-default agilehovereffect">
-			<div class="navbar-header navbar-left">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-			</div>
-
-			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="margin-left:40px;">
-				<nav class="link-effect-2 wthreehovereffect" id="link-effect-2">
-					<ul class="nav navbar-nav">
-						<li><a class="scroll" href="#w3lsaboutaits"><span>ABOUT</span></a></li>
-						<li><a class="scroll" href="#wthreelocationsaits"><span>LOCATIONS</span></a></li>
-						<li><a class="scroll" href="#agilepackagesw3l"><span>PACKAGES</span></a></li>
-						<div class="w3_navigation_pos">
-							<a href="/">
-								<img src="/images/logo.png" alt="TravelPedia">
-								<h1 style="font-size:40px; font-weight:bold;">TravelPedia</h1>
-							</a>
-						</div>
-						<li><a href="/tours"><span>TOURS</span></a></li>
-						<li><a class="scroll" href="#wthreereviews"><span>REVIEWS</span></a></li>
-						<li><a class="scroll" href="#agilecontactw3ls"><span>CONTACT</span></a></li>
-						{{#if user}}
-						<li><a href="/users/logout"><span>LOG OUT</span></a></li>
-						{{else}}
-						<li><a href="/users/login"><span>LOG IN</span></a></li>
-						{{/if}}
-					</ul>
-				</nav>
-			</div>
-		</nav>
-
+    			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="margin-left:20px;">
+    				<nav class="link-effect-2 wthreehovereffect" id="link-effect-2">
+    					<ul class="nav navbar-nav">
+    						<li><a class="scroll" href="#w3lsaboutaits"><span>ABOUT</span></a></li>
+    						<li><a class="scroll" href="#wthreelocationsaits"><span>LOCATIONS</span></a></li>
+    						<li><a class="scroll" href="#agilepackagesw3l"><span>PACKAGES</span></a></li>
+    						<li><a href="/tours"><span>TOURS</span></a></li>
+    						<li><a class="scroll" href="#wthreereviews"><span>REVIEWS</span></a></li>
+    						<li><a class="scroll" href="#agilecontactw3ls"><span>CONTACT</span></a></li>
+    						{{#if user}}
+    						<li><a href="/users/logout"><span>LOG OUT</span></a></li>
+    						{{else}}
+    						<li><a href="/users/login"><span>LOG IN</span></a></li>
+    						{{/if}}
+    					</ul>
+    				</nav>
+    			</div>
+    		</nav>
+        </div>
+        <!-- other handlebars -->
         {{{body}}}
-    </div>
-
+        <!-- end -->
 	</div>
 	<!-- //Header -->
 
@@ -198,7 +216,6 @@
 						<li><a class="scroll" href="#w3lsaboutaits"><span>ABOUT</span></a></li>
 						<li><a class="scroll" href="#wthreelocationsaits"><span>LOCATIONS</span></a></li>
 						<li><a class="scroll" href="#agilepackagesw3l"><span>PACKAGES</span></a></li>
-						<li><a class="scroll" href="#w3portfolioaits"><span>PORTFOLIO</span></a></li>
 						<li><a class="scroll" href="#wthreereviews"><span>REVIEWS</span></a></li>
 					</ul>
 				</div>
@@ -206,12 +223,13 @@
 					<h4 style="text-align: center">ADDRESS</h4>
 					<address>
 						<ul>
-							<li>40019 S.p.A</li>
-							<li>Parma Via Modena</li>
-							<li>Sant'Agata Bolognese</li>
-							<li>BO, Italy</li>
-							<li>+1 (734) 123-4567</li>
-							<li><a class="mail" href="mailto:mail@example.com">info@example.com</a></li>
+                            <li>LNMIIT<li>
+							<li>Rupa ki Nangal</li>
+							<li>Post-Sumel</li>
+							<li>Via-Jamdoli</li>
+							<li>Jaipur, Rajasthan</li>
+							<li>302031</li>
+							<li><a class="mail" href="mailto:mail@example.com">info@travelpedia.com</a></li>
 						</ul>
 					</address>
 				</div>
@@ -231,7 +249,7 @@
 
     <!-- Copyright -->
     <div class="copyright">
-        <p>© 2017 TravelPedia. All Rights Reserved | Design by <a href="#" target="=_blank"> Akshay Maheshwari </a></p>
+        <p>© 2017 TravelPedia. All Rights Reserved | Design by <a href="#" target="=_blank"> TravelPedia </a></p>
     </div>
     <!-- //Copyright -->
 
