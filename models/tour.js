@@ -41,7 +41,22 @@ module.exports.getTourByTour = function(cityname,days,budget,theme, callback){
 	Tour.find(query, callback);
 	console.log(query);
 }
+// remove tour
 
+module.exports.removeTour = function(cityname,days,budget,theme, callback){
+	var query = {};
+	if(cityname)
+		query = {destination : cityname};
+	if(days)
+		query = {days : days};
+	if(budget)
+		query = {budget : budget};
+	if(theme)
+		query = {theme : theme};
+	//var query = {destination : cityname , days:days , budget:budget , theme:theme};
+	Tour.deleteOne(query, callback);
+	console.log(query);
+}
 module.exports.getTourByDestination = function(cityname, callback){
 	var query = {destination : cityname};
 	Tour.find(query, callback);

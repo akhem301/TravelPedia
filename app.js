@@ -12,18 +12,20 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
 // MLAB
-mongoose.connect('mongodb://akhem301:1234567@ds161194.mlab.com:61194/travelpedia', {
-	useMongoClient: true,
-});
-
-// mongoose.connect('mongodb://localhost/travelpedia', {
+// mongoose.connect('mongodb://akhem301:1234567@ds161194.mlab.com:61194/travelpedia', {
 // 	useMongoClient: true,
 // });
+
+mongoose.connect('mongodb://localhost/travelpedia', {
+	useMongoClient: true,
+});
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var tours = require('./routes/tours');
+var addtours = require('./routes/addtours');
+var removetours = require('./routes/removetours');
 // Init App
 var app = express();
 
@@ -85,13 +87,15 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/tours', tours);
 app.use('/users/tours', tours);
+app.use('/addtours',addtours);
+app.use('/removetours',removetours);
 // app.use(function(req, res, next) {
 //     var err = new Error('Not Found');
 //     err.status = 404;
 //     next(err);
 // });
 // Set Port
-app.set('port', (process.env.PORT));
+app.set('port', (process.env.PORT || 3000));
 
 app.listen(app.get('port'), function(){
 	console.log('Server started on port '+app.get('port'));

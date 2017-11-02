@@ -4,7 +4,7 @@ var router = express.Router();
 var Tour = require('../models/tour');
 
 router.get('/', function(req, res){
-	res.render('tours');
+	res.render('addtours');
 });
 
 function ensureAuthenticated(req, res, next){
@@ -37,25 +37,23 @@ router.post('/', function(req, res){
 		res.render('tours',{
 			errors:errors
 		});
-	}
-	else {
-		Tour.getTourByTour(destination,days,budget,theme, function(err,tour){
-			if(err) throw err;
-				//  console.log(tour);
-	        	if(!tour){
-					// console.log('tours not found');
-	        		return done(null, false, {message: 'No tours available'});
-	        	}
-				// req.flash('error_msg' , 'No tours available');
-				console.log(tour);
-				// req.flash('error_msg');
+    }
+    else{
+    	var newTour = new Tour({
+    		destination: destination,
+    		days:days,
+    		budget: budget,
+    		theme: theme
+    	});
 
-				res.render('tours', {
-				tour : tour
-				});
-		});
+    	Tour.createTour(newTour, function(err, tour){
+    		if(err) throw err;
+            console.log(newTour);
+            req.flash('success_msg', 'Tour has been added');
+            res.render('/addtours');
+	   });
+    }
 
-	}
 });
 
 module.exports = router;
