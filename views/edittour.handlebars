@@ -1,0 +1,46 @@
+
+
+	<!-- search table -->
+<div style="padding: 170px 100px 100px 0px;">
+    <div class="container">
+        <h1 id="myh1" style="padding-bottom: 20px; color:#808080">All Tours</h1>
+    </div>
+    <!-- end -->
+
+	<!-- Display tours if any -->
+	{{#if tour}}
+	<div class="container">
+        <table class="table table-hover" style="border: 1px solid #ccc;">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tour Name</th>
+              <th>Destination</th>
+              <th>Days</th>
+              <th>Theme</th>
+              <th>Visibility</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each tour}}
+            <tr>
+              <th scope="row">{{this._id}}</th>
+              <td>{{this.tourname}}</td>
+              <td>{{this.destination}}</td>
+              <td>{{this.days}}</td>
+              <td>{{this.theme}}</td>
+              <td><label class="switch">
+                  <input type="checkbox" checked>
+                  <span class="slider111 round"></span>
+                  </label>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+	</div>
+
+	{{/if}}
+</div>
+
+	<!-- //end -->

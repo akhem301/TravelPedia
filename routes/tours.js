@@ -4,7 +4,7 @@ var router = express.Router();
 var Tour = require('../models/tour');
 
 router.get('/', function(req, res){
-	res.render('tours');
+	res.render('searchtours');
 });
 
 function ensureAuthenticated(req, res, next){
@@ -17,7 +17,7 @@ function ensureAuthenticated(req, res, next){
 }
 
 // Search Tours
-router.post('/', function(req, res){
+router.post('/searchtours', function(req, res){
 
 	// console.log("here");
 	var destination = req.body.destination;
@@ -34,7 +34,7 @@ router.post('/', function(req, res){
 	var errors = req.validationErrors();
 
 	if(errors){
-		res.render('tours',{
+		res.render('searchtours',{
 			errors:errors
 		});
 	}
@@ -46,16 +46,52 @@ router.post('/', function(req, res){
 					// console.log('tours not found');
 	        		return done(null, false, {message: 'No tours available'});
 	        	}
-				// req.flash('error_msg' , 'No tours available');
-				console.log(tour);
-				// req.flash('error_msg');
-
-				res.render('tours', {
+				res.render('searchtours', {
 				tour : tour
 				});
 		});
-
 	}
+});
+
+router.post('/viewtours' , function(req,res){
+
+		var idd = req.body.id;
+		// console.log(idd);
+		Tour.getTourById(idd, function(err,tournew){
+			if(err) throw err;
+	        	if(!tournew){
+	        		return done(null, false, {message: 'No tours available'});
+	        	}
+				// console.log(tournew);
+				res.render('tour', {tournew : tournew, layout:'layout.handlebars'});
+		});
+
+});
+
+router.post('/buytour' , function(req,res){
+
+		var idd = req.body.id;
+		console.log(idd);
+		Tour.getTourById(idd, function(err,tournew){
+			if(err) throw err;
+	        	if(!tournew){
+	        		return done(null, false, {message: 'No tours available'});
+	        	}
+				// console.log(tournew);
+				var c=tournew.counter;
+				c= c+1;
+				tournew.counter=c;
+
+				Tour.updateTourByCounter(idd,c,function(err,tour){
+			        if(err) throw err;
+			            if(!tour){
+			                return done(null, false, {message: 'Tour not found!'});
+			            }
+			    });
+
+				res.render('tour', {tournew : tournew, layout:'layout.handlebars'});
+		});
+
 });
 
 module.exports = router;

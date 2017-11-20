@@ -15,10 +15,36 @@ var UserSchema = mongoose.Schema({
 	},
 	name: {
 		type: String
+	},
+	streetAddress: {
+		type: String
+	},
+	city: {
+		type: String
+	},
+	state: {
+		type: String
+	},	
+	profilepic: {
+		data: Buffer, 
+		contentType: String
 	}
+
 });
 
 var User = module.exports = mongoose.model('User', UserSchema);
+
+app.use(multer({ dest: ‘./uploads/’,
+	rename: function (fieldname, filename) {
+	  return filename;
+	},
+   }));
+app.post(‘/api/photo’,function(req,res){
+	var newItem = new Item();
+	newItem.img.data = fs.readFileSync(req.files.userPhoto.path)
+	newItem.img.contentType = ‘image/png’;
+	newItem.save();
+   });   
 
 module.exports.createUser = function(newUser, callback){
 	bcrypt.genSalt(10, function(err, salt) {
@@ -31,7 +57,6 @@ module.exports.createUser = function(newUser, callback){
 
 module.exports.getUserByUsername = function(username, callback){
 	var query = {username: username};
-	// console.log('in user db');
 	User.findOne(query, callback);
 }
 

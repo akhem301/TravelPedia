@@ -2,10 +2,11 @@
 	<!-- Login part -->
     <div style="padding: 170px 0px 100px 0px;">
         <div class="container">
-            <h1 style="display: inline-block; margin-right: 480px; color:#808080" id="myh1">Account Login</h1>
-            <h4 style="display: inline-block; color:#808080" id="myh4">Do not have an account?</h4>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="/users/register" class="newbtn3">Register</a>
+            <!-- <h1 style="display: inline-block; position:center; color:#000; font-size:100px;">Welcome {{manager.name}}</h1> -->
+            {{#if manager}}
+            <h1 style="display: inline-block; position:center; color:#FFF; font-size:100px;">Welcome {{manager.name}}</h1>
+            {{else}}
+            <h1 style="display: inline-block; margin-right: 480px; color:#808080;" id="myh1">Manager Login</h1>
             <hr style="width: 100%; margin-top: 0px;"/>
 
             <!-- checking for flash message -->
@@ -24,10 +25,10 @@
 
             <!-- //end -->
             <div style="float:left">
-            <form method="post" action="/users/login">
+            <form method="post" action="/managers/login1">
               <div class="form-group">
-                <h4 id="myh4">Username</h4>
-                <input id="inpbox" type="text" class="form-control" name="username" placeholder="Username">
+                <h4 id="myh4">Manager ID</h4>
+                <input id="inpbox" type="text" class="form-control" name="mID" placeholder="Manager ID">
               </div>
               <div class="form-group">
                 <h4 id="myh4">Password</h4>
@@ -36,11 +37,6 @@
               <button type="submit" class="newbtn2">Submit</button>
             </form>
             </div>
-            <div style="float:right; padding-right: 50px; padding-top: 70px;">
-                <h3 id="myh4">Are you a tour manager? Log in as a manager </h3>
-                <!-- <input class="newbtn2" type="submit" name="type" value="Manager"> -->
-                <!-- <button name="type" type="submit" value="mgr" class="newbtn2">Manager</button> -->
-                <a href="/managers/login1" class="newbtn2">Manager</a>
-            </div>
+            {{/if}}
         </div>
     </div>

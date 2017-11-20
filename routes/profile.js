@@ -4,7 +4,7 @@ var router = express.Router();
 var Tour = require('../models/tour');
 
 router.get('/', function(req, res){
-	res.render('removetours', {layout : false});
+	res.render('profile');
 });
 
 function ensureAuthenticated(req, res, next){
@@ -34,7 +34,7 @@ router.post('/', function(req, res){
 	var errors = req.validationErrors();
 
 	if(errors){
-		res.render('login',{
+		res.render('tours',{
 			errors:errors
 		});
     }
@@ -48,11 +48,11 @@ router.post('/', function(req, res){
 	        		return done(null, false, {message: 'No tours available'});
 	        	}
 				// req.flash('error_msg' , 'No tours available');
-				//console.log(tour);
+				console.log(tour);
 
 				// req.flash('error_msg');
-                //req.flash('success_msg', 'Tour has been removed');
-                res.redirect('/profile');
+                req.flash('success_msg', 'Tour has been removed');
+                res.redirect('/removetours');
 		});
     }
 

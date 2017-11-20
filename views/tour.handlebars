@@ -1,0 +1,71 @@
+
+
+	<!-- search table -->
+<div style="padding: 170px 100px 200px 0px;" class="bgimg">
+    <div class="container">
+        <h1 id="myh1" style="padding-bottom: 20px; color:#808080 font-weight: bold;">Tour Details</h1>
+    </div>
+    <!-- end -->
+
+	<!-- Display tours if any -->
+
+    {{#if tournew}}
+    <div id="created" class="container" style="display:block; font-size: 19px;">
+        <form action="/tours/buytour" method="POST">
+        <table class="table table-hover" style="border: 1px solid #ccc; background-color: #FFF;">
+          <thead>
+            <tr>
+              <th width="15%">Field</th>
+              <th>Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col">Tour Name</th>
+              <td>{{tournew.tourname}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Theme</th>
+              <td>{{tournew.theme}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Source</th>
+              <td>{{tournew.source}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Destination</th>
+              <td>{{tournew.destination}}</td>
+            </tr>
+            <tr>
+              <th scope="col">No. of Days</th>
+              <td>{{tournew.days}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Price</th>
+              <td>{{tournew.budget}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Tour Itinerary</th>
+              <td>{{tournew.tourit}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Staff Alloted</th>
+              <td>{{tournew.staff}}</td>
+            </tr>
+            <tr>
+              <th scope="col">People on board</th>
+              <td>{{tournew.counter}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Maximum People</th>
+              <td>{{tournew.capacity}}</td>
+            </tr>
+          </tbody>
+        </table>
+            <button class="newbtn" type="submit" style="align-content: center;" value ="{{tournew._id}}" name="id">Buy Tour</button>
+        </form>
+    </div>
+    {{/if}}
+</div>
+
+	<!-- //end -->

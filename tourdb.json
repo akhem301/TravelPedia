@@ -1,14 +1,380 @@
-{"destination":"Goa","days":5,"budget":16878,"theme":"Vacation"}
-{"destination":"manali","days":3,"budget":2085,"theme":"Winter"}
-{"destination":"daman","days":7,"budget":10996,"theme":"Vacation"}
-{"destination":"Banglore","days":6,"budget":9764,"theme":"Summer"}
-{"destination":"Delhi","days":10,"budget":39421,"theme":"Wildlife"}
-{"destination":"ajmer","days":6,"budget":9589,"theme":"ethnic"}
-{"destination":"Delhi","days":5,"budget":63421,"theme":"Wildlife"}
-{"destination":"ajmer","days":6,"budget":9589,"theme":"ethnic"}
-{"destination":"Goa","days":5,"budget":16878,"theme":"Summer"}
-{"destination":"manali","days":10,"budget":20845,"theme":"Winter"}
-{"destination":"daman","days":4,"budget":10996,"theme":"Vacation"}
-{"destination":"daman","days":4,"budget":1096,"theme":"Winter"}
-{"destination":"Hyderabad","days":7,"budget":97464,"theme":"Summer"}
-{"destination":"Goa","days":4,"budget":1878,"theme":"Vacation"}
+    {   "tourname":"Kerala- A Lover's Paradise",
+        "source": "Jaipur",
+        "destination":"Kerala",
+        "days":7,
+        "budget":51274,
+        "capacity":25,
+        "tourit":"Munnar (2N) Thekkady (1N) Allepey (1N) Kovalam and Poovar (2N). Catch the sunset at Alappuzha beach, Eravikulam National Park, Mattupetty Lake and Dam, Backwaters of Kerala, Opportunity to explore Kanyakumari!",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Couples",
+        "url":"/images/kerala.jpg"
+    }
+
+    {   "tourname":"Bali- The Paradise",
+        "source":"Jaipur",
+        "destination":"Bali",
+        "days":7,
+        "budget":129661,
+        "capacity":10,
+        "tourit":"Bali (6N). Visa is free and will be given on arrival. Holiday includes Bali City Tour, Tour of Tanah Lot at Sunset, Full day Besakih Temple Tour, accommodation and private transfers!",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Couples",
+        "url":"/images/bali.jpg"
+    }
+
+
+    {   "tourname":"Best of Kashmir",
+        "source":"Jaipur",
+        "destination":"Jammu and Kashmir",
+        "days":5,
+        "budget":38496,
+        "capacity":15,
+        "tourit":"Srinagar(2N) | Gulmarg(2N) A land of unmatched scenic beauty and rich culture, Kashmir truly is a ‘Heaven on Earth’. The state of Jammu and Kashmir shows a rich diversity in its landscape as people move from the south to the north. Low hills in the south, snow-capped peaks and velvety valleys in the centre and a barren, yet enchanting realm in the extreme north make up the state’s geography.",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Couples",
+        "url":"/images/kashmir.jpg"
+    }
+
+
+
+    {   "tourname":"Australia in Style",
+        "source":"New Delhi",
+        "destination":"Australia",
+        "days":12,
+        "budget":188010,
+        "capacity":15,
+        "staff":"",
+        "tourit":" Gold Coast - 3 Nights | Melbourne - 3 Nights | Sydney - 3 Nights Customizable itineraries where you may choose transport, stay & sightseeing as per your taste & comfort",
+        "counter":0,
+        "status":0,
+        "theme":"International",
+        "url":"/images/australia.jpg"
+    }
+
+
+    {   "tourname":"Northeast Wow Darjelling and Gangtok",
+        "source":"Kolkata",
+        "destination":"Delhi",
+        "days":3,
+        "budget":44404,
+        "capacity":20,
+        "staff":"",
+        "tourit":"Full-day excursion to the idyllic Changu Lake ,Encounter regional animals at the Darjeeling Zoo ,Visit to Himalayan Mountaineering Institute.",
+        "counter":0,
+        "status":0,
+        "theme":"Couples",
+        "url":"/images/gangtok.jpg"
+    }
+
+
+
+    {   "tourname":"Magical Thailand - Pattaya and Bangkok",
+        "source":"Jaipur",
+        "destination":"Thailand",
+        "days":6,
+        "budget":41077,
+        "capacity":30,
+        "tourit":"Pattaya (3N) | Bangkok (2N) We guarantee hotels at time of booking, and assure better on-ground experience!",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"International",
+        "url":"/images/thailand.jpg"
+    }
+
+
+    {   "tourname":"Misty Hills of Nilgiris - Ooty and Kodaikanal",
+        "source":"Bangalore",
+        "destination":"Nilgiris",
+        "days":5,
+        "budget":36020,
+        "capacity":13,
+        "tourit":"Ooty (2N) | Kodaikanal (2N) Get away for a short weekend trip to the Mystic hills of Karnataka. Private AC Sedan available for whole trip ~ Stay in expert certified hotels in each city ~ Local sightseeing in each city - visit the top attractions and spend quality time together to make it a trip to remember ",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Couples",
+        "url":"/images/ooty.jpg"
+    }
+
+
+
+    {   "tourname":"Goa Snorkelling Special",
+        "source":"Mumbai",
+        "destination":"Goa",
+        "days":4,
+        "budget":34317,
+        "capacity":13,
+        "tourit":"Monkey Island(3N) Enjoy the enchantment of the underwater world through an exciting snorkeling experience on Goa’s magnificent Monkey Island. Enjoy the most beautiful sceneries & Dolphin under the sea with various water activities in this surreal place.",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Adventure",
+        "url":"/images/goa.jpg"
+    }
+
+    {   "tourname":"Splendid Himachal Holiday",
+        "source":"Bangalore",
+        "destination":"Nilgiris",
+        "days":5,
+        "budget":36020,
+        "capacity":13,
+        "tourit":"Agra (1N) | New Delhi (1N) | Shimla (2N) | Manali (3N) | Chandigarh (1N)  ",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Family",
+        "url":"/images/himachal.jpg"
+    }
+
+    {   "tourname":"Mesmerising Maldives",
+        "source":"New Delhi",
+        "destination":"Maldives",
+        "days":5,
+        "budget":36020,
+        "capacity":13,
+        "tourit":"Maldives (4N) An inexpensive getaway to Asia's Garden City! Visa is free and will be given to you on arrival! Feel free to change the resort by clicking on the 'customize' tab. Transfers are not included in the package.",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"International",
+        "url":"/images/maldives.jpg"
+    }
+
+    {   "tourname":"Kuala Lumpur, Genting and Singapore",
+        "source":"Bangalore",
+        "destination":"Singapore",
+        "days":7,
+        "budget":167338,
+        "capacity":13,
+        "tourit":"Kuala Lumpur (3N) | Singapore (3N) Witness the best of Singapore and Malaysia with this package which includes a visit to Sentosa Island, Universal Studios, Sunway Lagoon Theme Park and Genting Highlands. ",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"International",
+        "url":"/images/kuala.jpg"
+    }
+
+    {   "tourname":"Family Friendly Bangkok and Pattaya",
+        "source":"Bangalore",
+        "destination":"Thailand",
+        "days":6,
+        "budget":51917,
+        "capacity":13,
+        "tourit":"Pattaya (3N) | Bangkok (2N) Visit Under Water World in Pattaya, Sri Racha Tiger Zoo, Muay Thai Live (Bangkok) & Samphran Elephant & Crocodile Show ",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Family",
+        "url":"/images/bangkok.jpg"
+    }
+
+    {   "tourname":"Coorg Quad Biking Special",
+        "source":"Bangalore",
+        "destination":"Coorg",
+        "days":3,
+        "budget":11782,
+        "capacity":13,
+        "tourit":"Coorg (2N) Coorg is acres and acres of emerald green plantations. On this day, a car (available for sightseeing) will pick you up from a pre-informed location in Bangalore and will drive you to your hotel in Coorg. Once you have checked-in, spend the day at leisure. Later, return to your hotel for a comfortable stay. ",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Adventure",
+        "url":"/images/coorg.jpg"
+    }
+
+    {   "tourname":"Corbett Getaway with Safari Trips",
+        "source":"New Delhi",
+        "destination":"Corbett National Park",
+        "days":35,
+        "budget":12152,
+        "capacity":13,
+        "tourit":"Corbett (2N) Corbett is an adventure in the wild! On this day, a car (available for sightseeing) will pick you up from a pre-informed location in Delhi NCR and will drive you to your hotel in Corbett. In the afternoon, you will visit the famous Corbett Museum. Originally the house of Jim Corbett, the museum is a gateway to understanding the magnificence of the man-eaters and the vast Corbett Reserve. ",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Adventure",
+        "url":"/images/corbett.jpg"
+    }
+
+    {   "tourname":"Dubai Super Saver",
+        "source":"Jaipur",
+        "destination":"Dubai",
+        "days":6,
+        "budget":67990,
+        "capacity":13,
+        "tourit":"Dubai(5N) If Dubai is your dream destination and you have been contemplating a tour for long, then it is time you go on that long overdue trip. With this Dubai package, see the best sights and have the best experiences the city has to offer. You will be greeted with an enthralling trip to Burj Khalifa and The Dubai Mall. Taking the fun quotient a notch higher will be the exhilarating desert safari, which entails a delectable BBQ dinner along with a captivating belly dance performance amidst the golden sands. Another opportunity to fall in love with the megacity will be the half-day city tour planned for you. It will cover Zabeel Palace, Atlantis, The Palm, Kite Beach, Dubai Museum and many other points of interest.  ",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"International",
+        "url":"/images/dubai.jpg"
+    }
+
+    {   "tourname":"Andaman Havelock Special",
+        "source":"Chennai",
+        "destination":"Andaman",
+        "days":5,
+        "budget":82222,
+        "capacity":13,
+        "tourit":"Port Blair (2N) | Havelock (1N) | Port Blair (1N) Visit to the historic Cellular Jail, Comfortable private transfers, Visit to Ross Island, Light and Sound Show at Cellular Jail  ",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Adventure",
+        "url":"/images/andaman.jpg"
+    }
+
+    {   "tourname":"Blessings of Panch Dwarka",
+        "source": "Ahmedabad",
+        "destination":"Udaipur",
+        "days":7,
+        "budget":37073,
+        "capacity":25,
+        "tourit":"Udaipur (6N) One of the most calm and serene destinations in India, Udaipur is famous for its Mewar heritage. In the evening visit the grand City Palace and Lake Pichola to soak in the peace and quiet of this world renowned destination",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "Theme":"Pilgrimage",
+        "url":"/images/dwarka.jpg"
+    }
+
+
+    {   "tourname":"Padharo Rajasthan",
+        "source": "Ahmedabad",
+        "destination":"Jaipur",
+        "days":9,
+        "budget":28450,
+        "capacity":20,
+        "tourit":"Jaipur (2N) | Alwar (1N) | Chittorgarg (2N) | Jaisalmer (2N) | Bikaner (1N) Rajasthan, the epitome of royalty, is one of India's most culturally vibrant states. This 'Land of the Kings' has a glorious past and this is reflected in the towering forts, magnificent palaces and intricate marble temples.",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Ethnic",
+        "url":"/images/rajasthan.jpg"
+    }
+
+
+
+    {   "tourname":"Fantastic Delhi, Agra, Shimla & Manali",
+        "source": "Delhi",
+        "destination":"Manali",
+        "days":7,
+        "budget":22750,
+        "capacity":20,
+        "tourit":"Delhi (1N) | Agra (1N) | Shimla (2N) | Manali (2N) Customizable itineraries where you may choose transport, stay & sightseeing as per your taste & comfort",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Winter",
+        "url":"/images/shimla.jpg"
+    }
+
+
+    {   "tourname":"Mysterious Himachal",
+        "source":"Jaipur",
+        "destination":"Himachal Pradesh",
+        "days":6,
+        "budget":32486,
+        "capacity":30,
+        "tourit":"Lahul (3N) | Spiti (2N) Himachal Pradesh A land of unmatched scenic beauty and rich culture, Shimla truly is a ‘Heaven’. The state of Himachal shows a rich diversity in its landscape as people move from the south to the north. Low hills in the south, snow-capped peaks and velvety valleys in the centre and a barren, yet enchanting realm in the extreme north make up the state’s geography.",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Couples",
+        "url":"/images/himla.jpg"
+    }
+
+
+    {   "tourname":"Mesmerising Melbourne",
+        "source":"New Delhi",
+        "destination":"Melbourne",
+        "days":7,
+        "budget":260020,
+        "capacity":22,
+        "tourit":"Melbourne (6N) Melbourne is the coastal capital of the southeastern Australian state of Victoria. At the city's centre is the modern Federation Square development, with plazas, bars, and restaurants by the Yarra River. In the Southbank area, the Melbourne Arts Precinct is the site of Arts Centre Melbourne – a performing arts complex – and the National Gallery of Victoria, with Australian and indigenous art.",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"International",
+        "url":"/images/melbourne.jpg"
+    }
+
+
+    {   "tourname":"Amazing Alwar",
+        "source":"Baroda",
+        "destination":"Alwar",
+        "days":5,
+        "budget":52222,
+        "capacity":30,
+        "tourit":"Alwar (2N) | Sariska (2N) Alwar is a city in the northern Indian state of Rajasthan. Alwar City Palace, from 1793, blends architectural styles and has marble pavilions on lotus-shaped bases in its courtyard, plus a museum with rare manuscripts. It’s next to the marble and sandstone Moosi Maharani Chhatri shrine. A steep path leads to the Bala Qila fort, with marble pillars and latticed balconies. Sariska Tiger Reserve lies southwest of Alwar.",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Ethnic",
+        "url":"/images/alwar.jpg"
+        }
+
+
+    {   "tourname":"Buzzing Las Vegas",
+        "source":"Mumbai",
+        "destination":"Las Vegas",
+        "days":8,
+        "budget":240177,
+        "capacity":20,
+        "tourit":"Las Vegas(7N) Las Vegas, in Nevada’s Mojave Desert, is a resort city famed for its vibrant nightlife, centered around 24-hour casinos and other entertainment options. Its main street and focal point is the Strip, just over 4 miles long. This boulevard is home to themed hotels with elaborate displays such as fountains synchronized to music as well as replicas of an Egyptian pyramid, the Venetian Grand Canal, and the Eiffel Tower.",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"International",
+        "url":"/images/vegas.jpg"
+    }
+
+    {   "tourname":"Hanging Hong Kong",
+        "source":"New Delhi",
+        "destination":"Honk kong",
+        "days":10,
+        "budget":188010,
+        "capacity":10,
+        "tourit":" Hong Kong (9N) Hong Kong is an autonomous territory, and former British colony, in southeastern China. Its vibrant, densely populated urban centre is a major port and global financial hub with a skyscraper-studded skyline. Central (the business district) features architectural landmarks like I.M. Pei’s Bank of China Tower. Hong Kong is also a major shopping destination, famed for bespoke tailors and Temple Street Night Market",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"International",
+        "url":"/images/hk.jpg"
+    }
+
+     {  "tourname":"Best of Beaches",
+        "source":"Banglore",
+        "destination":"Daman and Diu",
+        "days":10,
+        "budget":28010,
+        "capacity":20,
+        "tourit":"Daman(5N) | Diu (4N) Daman and Diu, a union territory in west India, consists of 2 separate areas divided by the Arabian Sea. The Daman Ganga River flows through the coastal town of Daman. Diu is a small island and mainland village. The Fort of Moti Daman, Diu Fort and 16th-century churches reflect the territory’s past as a Portuguese colony. In the town of Moti Daman, the Basilica of Bom Jesus Church is known for its gilt altarpiece.",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Couple",
+        "url":"/images/damani.jpg"
+    }
+
+
+    {  "tourname":"Dangerous Darjeeling",
+        "source":"Chennai",
+        "destination":"Darjeeling",
+        "days":5,
+        "budget":23782,
+        "capacity":13,
+        "tourit":"Darjeeling(4N) Darjeeling is a town in India's West Bengal state, in the Himalayan foothills. Once a summer resort for the British Raj elite, it remains the terminus of the narrow-gauge Darjeeling Himalayan Railway, or “Toy Train,” completed in 1881. It's famed for the distinctive black tea grown on plantations that dot its surrounding slopes. Its backdrop is Mt. Kanchenjunga, among the world’s highest peaks. ",
+        "staff":"",
+        "counter":0,
+        "status":0,
+        "theme":"Adventure",
+        "url":"/images/dar.jpg"
+    }

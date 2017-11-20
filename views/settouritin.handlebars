@@ -1,0 +1,52 @@
+
+	<!-- search table -->
+<div style="padding: 170px 100px 100px 0px;">
+    <div class="container">
+        <h1 id="myh1" style="padding-bottom: 20px; color:#808080">Set Itinerary of Tours</h1>
+    <!-- end -->
+    </div>
+
+    <div class="container" style="padding-bottom:100px;">
+        <form action="/managers/settouritin" method="POST">
+        <select class="newbtn4" name="tourname">
+          {{#each tour}}
+            <option style="background-color: #e3e7ed; color: #000" name={{tour.tourname}} value="">{{this.tourname}}</option>
+          {{/each}}
+        </select>
+        <button class="newbtn" type="submit">Select</button>
+        </form>
+    </div>
+
+    {{#each tour2}}
+    <div id="created" class="container" style="display:block;font-size: 19px;">
+        <form action="/managers/savechanges" method="POST">
+        <table class="table table-hover" style="border: 1px solid #ccc;">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col">ID</th>
+              <td><input type="hidden" name="id" value="{{this._id}}" />{{this._id}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Tour Name</th>
+              <td>{{this.tourname}}</td>
+            </tr>
+            <tr>
+              <th scope="col">Tour Itinerary</th>
+              <td><textarea cols="80" rows="5" name="itval">{{this.tourit}}</textarea></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="newbtn3" style="align-content: center;" type="submit">Save Changes</button>
+        </form>
+    </div>
+    {{/each}}
+</div>
+
+
+	<!-- //end -->

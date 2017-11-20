@@ -3,12 +3,15 @@ var bcrypt = require('bcryptjs');
 
 
 var TourPacks = mongoose.Schema({
-
-	tourname: {
+	tourID: {
 		type: String,
 		index:true
 	},
-	source: {
+	name:{
+		type: String,
+		index:true
+	},
+	source:{
 		type: String,
 		index:true
 	},
@@ -24,31 +27,23 @@ var TourPacks = mongoose.Schema({
 		type: Number,
         index:true
 	},
-	capacity: {
-		type: Number,
-		index:true
-	},
-	tourit: {
-		type: String,
-		index:true
-	},
-	staff: {
-		type: String,
-		index:true
-	},
-	counter: {
-		type: Number,
-		index:true
-	},
-	status: {
-		type: Number,
-		index:true
-	},
 	theme:   {
 		type: String,
         index:true
 	},
-	url: {
+	maxpeople:{
+		type: Number,
+		index:true
+	},
+	counter:{
+		type: Number,
+		index:true
+	},
+	lockstatus:{
+		type: Boolean,
+		index:true
+	},
+	image:{
 		type: String,
 		index:true
 	}
@@ -60,13 +55,6 @@ module.exports.createTour = function(newTour, callback){
 	    newTour.save(callback);
 }
 // Tour.insertOne({ destination: 'Goa', days: '4', budget: '10000', theme: 'vacation'});
-
-//Tour by ID
-module.exports.getTourById = function(id, callback){
-	Tour.findById(id, callback);
-}
-
-//Get tour by search
 module.exports.getTourByTour = function(cityname,days,budget,theme, callback){
 	var query = {};
 	if(cityname)
@@ -79,43 +67,24 @@ module.exports.getTourByTour = function(cityname,days,budget,theme, callback){
 		query = {theme : theme};
 	//var query = {destination : cityname , days:days , budget:budget , theme:theme};
 	Tour.find(query, callback);
-	//console.log(query);
+	console.log(query);
 }
-
-module.exports.getAllTours = function(callback){
-	var query = {};
-
-	Tour.find(query, callback);
-	// console.log(query);
-}
-
 // remove tour
-// module.exports.removeTour = function(cityname,days,budget,theme, callback){
-// 	var query = {};
-// 	if(cityname)
-// 		query = {destination : cityname};
-// 	if(days)
-// 		query = {days : days};
-// 	if(budget)
-// 		query = {budget : budget};
-// 	if(theme)
-// 		query = {theme : theme};
-// 	//var query = {destination : cityname , days:days , budget:budget , theme:theme};
-// 	Tour.deleteOne(query, callback);
-// 	// console.log(query);
-// }
 
-//get tour by id
-module.exports.getTourById = function(id, callback){
-	Tour.findById(id, callback);
+module.exports.removeTour = function(cityname,days,budget,theme, callback){
+	var query = {};
+	if(cityname)
+		query = {destination : cityname};
+	if(days)
+		query = {days : days};
+	if(budget)
+		query = {budget : budget};
+	if(theme)
+		query = {theme : theme};
+	//var query = {destination : cityname , days:days , budget:budget , theme:theme};
+	Tour.deleteOne(query, callback);
+	console.log(query);
 }
-
-// get tour by name
-module.exports.getTourByName = function(name, callback){
-	var query = {tourname : name};
-	Tour.find(query, callback);
-}
-
 module.exports.getTourByDestination = function(cityname, callback){
 	var query = {destination : cityname};
 	Tour.find(query, callback);
@@ -138,15 +107,12 @@ module.exports.getTourByBudget = function(budget, callback){
 	Tour.find(query, callback);
 }
 
-// Updating the tours
-module.exports.updateTourByIti = function(id,iti, callback){
-	var query = {_id: id};
-	var newval = {tourit: iti}
-	Tour.updateOne(query, newval ,callback);
+module.exports.getTourByStatus = function(lockstatus, callback){
+	var query = {lockstatus: lockstatus};
+	Tour.find(query, callback);
 }
 
-module.exports.updateTourByCounter = function(id,cnt, callback){
-	var query = {_id: id};
-	var newval = {counter: cnt}
-	Tour.updateOne(query, newval ,callback);
+module.exports.getTourByID = function(ID, callback){
+	var query = {ID: tourID};
+	Tour.find(query, callback);
 }

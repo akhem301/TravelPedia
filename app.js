@@ -12,13 +12,14 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
 // MLAB
-// mongoose.connect('mongodb://akhem301:1234567@ds161194.mlab.com:61194/travelpedia', {
+mongoose.connect('mongodb://akhem301:1234567@ds161194.mlab.com:61194/travelpedia', {
+	useMongoClient: true}, function(err){
+		// if(err) console.log("failed to connect");
+});
+
+// mongoose.connect('mongodb://localhost/travelpedia', {
 // 	useMongoClient: true,
 // });
-
-mongoose.connect('mongodb://localhost/travelpedia', {
-	useMongoClient: true,
-});
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
@@ -26,6 +27,9 @@ var users = require('./routes/users');
 var tours = require('./routes/tours');
 var addtours = require('./routes/addtours');
 var removetours = require('./routes/removetours');
+var profile = require('./routes/profile');
+var managers = require('./routes/managers');
+
 // Init App
 var app = express();
 
@@ -89,6 +93,9 @@ app.use('/tours', tours);
 app.use('/users/tours', tours);
 app.use('/addtours',addtours);
 app.use('/removetours',removetours);
+app.use('/profile',profile);
+app.use('/managers',managers);
+
 // app.use(function(req, res, next) {
 //     var err = new Error('Not Found');
 //     err.status = 404;

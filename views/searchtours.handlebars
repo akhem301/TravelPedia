@@ -1,0 +1,47 @@
+
+
+	<!-- search table -->
+<div style="padding: 170px 100px 500px 0px;">
+    <div class="container">
+        <h1 id="myh1" style="padding-bottom: 20px; color:#808080">Search Tours</h1>
+		<form method="POST" action="/tours/searchtours">
+          <div class="col-sm-12">
+
+            <input id="inpbox" style="width:20%" type="text" class="form-control" name="destination" placeholder="Destination">
+            <input id="inpbox" style="width:20%" type="text" class="form-control" name="days" placeholder="Number of days">
+			<input id="inpbox" style="width:20%" type="text" class="form-control" name="budget" placeholder="Budget">
+            <input id="inpbox" style="width:20%" type="text" class="form-control" name="theme" placeholder="Theme">
+
+          	<button type="submit" class="newbtn2">Submit</button>
+		   </div>
+        </form>
+    </div>
+    <!-- end -->
+
+	<!-- Display tours if any -->
+	{{#if tour}}
+	<div class="wthreelocationsaits" id="wthreelocationsaits">
+		<div class="container">
+			<h4 id="myh3">Results</h4>
+            <section class="grid3d vertical" id="grid3d">
+				<div class="grid-wrap">
+					<div class="grid">
+    				{{#each tour}}
+    				<figure class="col-md-4 effect-zoe"><img style="height:250px; width:370px;" src="{{this.url}}" alt="TravelPedia">
+    					<figcaption>
+                            <h4 style="font-weight:bold;">{{this.tourname}}</h4>
+                            <form action="/tours/viewtours" method="POST">
+                            <button class="newbtn" style="margin-top:10px;" type="submit" value="{{this._id}}" name="id">View Details</button>
+                            </form>
+                        </figcaption>
+    				</figure>
+    				{{/each}}
+                    </div>
+                </div>
+			</section>
+		</div>
+	</div>
+	{{/if}}
+</div>
+
+	<!-- //end -->

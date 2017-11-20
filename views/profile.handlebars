@@ -1,0 +1,57 @@
+
+    <!-- Slider -->
+    <div class="slider">
+        <ul class="rslides" id="slider">
+            <li class="first-slide w3ls">
+                <img src="/images/slide-2.jpg" alt="TravelPedia">
+                <div class="wthreexperience">
+    				<!-- Profile -->
+    	            <div class="container" style="position: absolute; margin-top: 150px; margin-left: -150px;">
+    	                <h1 style="display: inline-block; margin-right: 480px;" id="myh1">MY PROFILE</h1>
+    	                <hr style="width: 100%; margin-top: 0px;"/>
+
+    	                <!-- checking for flash message -->
+
+    	                  {{#if success_msg}}
+    	                  <div class="alert alert-success" style="width: 30%;">{{success_msg}}</div>
+    	                  {{/if}}
+
+    	                  {{#if error_msg}}
+    	                    <div class="alert alert-danger" style="width: 30%;">{{error_msg}}</div>
+    	                  {{/if}}
+
+    	                  {{#if error}}
+    	                    <div class="alert alert-danger" style="width: 30%;">{{error}}</div>
+    	                  {{/if}}
+
+    	                <!-- //end -->
+
+    	                <form method="post" action="/users/profile">
+    	                  <div class="form-group">
+    	                    <h4 id="myh4">Username</h3>
+    	                    <input style="width:20%;" type="text" class="form-control" name="username" placeholder="Username">
+    	                  </div>
+    	                  <div class="form-group">
+    	                    <h4 id="myh4">Email_Id</h4>
+    	                    <input style="width:20%;" type="text" class="form-control" name="Email_Id" placeholder="Email_Id">
+    	                  </div>
+			   <div class="form-group">
+    	                    <h4 id="myh4">Phone_no</h4>
+    	                    <input style="width:20%;" type="text" class="form-control" name="phone_no" placeholder="Phone_no">
+    	                  </div>
+    	                   <div class="form-group">
+    	                    <h4 id="myh4">Address</h4>
+    	                    <input style="width:20%;" type="text" class="form-control" name="Address" placeholder="Address">
+    	                  </div>
+
+
+
+    	                </form>
+    	            </div>
+                    <!-- <div id="animated-example" class="animated fadeIn"></div> -->
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- //Slider -->
+</div>

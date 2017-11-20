@@ -1,19 +1,26 @@
 var express = require('express');
 var router = express.Router();
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+var passportU = require('passport');
+var LocalstrategyU = require('passport-local').Strategy;
 
 var User = require('../models/user');
+var Manager = require('../models/manager');
 
 // Register
 router.get('/register', function(req, res){
 	res.render('register');
 });
 
-// Login
+// User Login
 router.get('/login', function(req, res){
 	res.render('login');
 });
+
+// // Manager Login
+// router.get('/login1', function(req, res){
+// 	console.log(req.body.name);
+// 	res.render('manager_login' , {layout:'manager_layout.handlebars'});
+// });
 
 // Register User
 router.post('/register', function(req, res){
@@ -53,43 +60,77 @@ router.post('/register', function(req, res){
 		req.flash('success_msg', 'You are registered and can now login');
 
 		res.redirect('/users/login');
+
 	}
 });
 
-passport.use(new LocalStrategy(
-  function(username, password, done) {
-   User.getUserByUsername(username, function(err, user){
-   	if(err) throw err;
-   	if(!user){
-   		return done(null, false, {message: 'Unknown User'});
-   	}
+passportU.use(new LocalstrategyU(
+	{
+   usernameField: 'mID',
+   passwordField: 'password',
+   passReqToCallback: true
 
-   	User.comparePassword(password, user.password, function(err, isMatch){
-   		if(err) throw err;
-   		if(isMatch){
-   			return done(null, user);
-   		} else {
-   			return done(null, false, {message: 'Invalid password'});
-   		}
-   	});
-   });
-  }));
+ 	},
+  function(req, username, password, done) {
+	//   console.log(req.body);
+	  if(req.body.username)
+	  {
+		   User.getUserByUsername(username, function(err, user){
+			   console.log('in user');
+		   	if(err) throw err;
+		   	if(!user){
+		   		return done(null, false, {message: 'Unknown User'});
+		   	}
+			   	User.comparePassword(password, user.password, function(err, isMatch){
+			   		if(err) throw err;
+			   		if(isMatch){
+			   			return done(null, user);
+			   		} else {
+			   			return done(null, false, {message: 'Invalid password'});
+			   		}
 
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
+			   	});
+			});
+	   }
+	   else
+	   {
+		   Manager.getManagerByMID(username, function(err, manager){
+			 //  console.log(manager.password);
+			 if(err) throw err;
+			 if(!manager){
+				 return done(null,false,{message: 'Unknown Manager'});
+			 }
+
+			 if(password == manager.password){
+				 return done(null, manager);
+			 } else {
+				 return done(null, false, {message: 'Invalid password'});
+			 }
+	 		});
+	   }
+}));
+
+passportU.serializeUser(function(manager, done) {
+  done(null, manager.id);
 });
 
-passport.deserializeUser(function(id, done) {
+passportU.deserializeUser(function(id, done) {
   User.getUserById(id, function(err, user) {
     done(err, user);
   });
 });
 
 router.post('/login',
-  passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
+  passportU.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
   function(req, res) {
     res.render('/');
   });
+
+  router.post('/login1',
+    passportU.authenticate('local', {successRedirect:'/managers/login1', failureRedirect:'/managers/login1',failureFlash: true}),
+    function(req, res) {
+      res.render('/');
+    });
 
 router.get('/logout', function(req, res){
 	req.logout();

@@ -105,11 +105,25 @@ a:focus, a:hover {
 	.navbar-default {
 		background: none;
 		border: none;
+		/*background-color: #333333;*/
+	}
+
+	.navbar-default-home {
+		background: none;
+		border: none;
 	}
 
 	nav.navbar.navbar-default {
-		padding: 5em 0;
+		padding: 50px 100px 70px 60px;
 		position: absolute;
+		width:100%;
+		z-index: 999;
+	}
+
+	nav.navbar.navbar2 {
+		padding: 50px 100px 30px 60px;
+		position: absolute;
+		width:100%;
 		z-index: 999;
 	}
 
@@ -128,14 +142,30 @@ a:focus, a:hover {
 	.w3_navigation_pos {
 		position: absolute;
 		top: 30px;
-		left: 0;
-		right: 0;
+		left: 0px;
+		right: 90px;
 		text-align: center;
 		width: 20%;
 		margin: 0 auto;
 	}
 
+	.w3_navigation_pos2 {
+		position: absolute;
+		top: 30px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		width: 20%;
+		/*margin-right: 900px;*/
+		/*margin: 0 auto;*/
+	}
+
 	.w3_navigation_pos img {
+		width: 100px;
+		/*padding-right: 100px;*/
+	}
+
+	.w3_navigation_pos2 img {
 		width: 100px;
 	}
 
@@ -347,9 +377,12 @@ a:focus, a:hover {
 	}
 
 	.navbar-nav > li:nth-child(3) a {
-		margin-right: 24.1em!important;
+		/*margin-right: 24.1em!important;*/
 	}
 
+	.navbar-nav > .mynav > li:nth-child(3) a {
+		/*margin-right: 24.1em!important;*/
+	}
 	/*-- Navbar-Hover-Effects --*/
 
 	/*-- Slider --*/
@@ -421,6 +454,66 @@ a:focus, a:hover {
 
 	/*-- //Slider --*/
 
+	/* switch slider */
+
+		.switch {
+	  position: relative;
+	  display: inline-block;
+	  width: 60px;
+	  height: 34px;
+	}
+
+	.switch input {display:none;}
+
+	.slider111 {
+	  position: absolute;
+	  cursor: pointer;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: #ccc;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	.slider111:before {
+	  position: absolute;
+	  content: "";
+	  height: 26px;
+	  width: 26px;
+	  left: 4px;
+	  bottom: 4px;
+	  background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	input:checked + .slider111 {
+	  background-color: #2196F3;
+	}
+
+	input:focus + .slider111 {
+	  box-shadow: 0 0 1px #2196F3;
+	}
+
+	input:checked + .slider111:before {
+	  -webkit-transform: translateX(26px);
+	  -ms-transform: translateX(26px);
+	  transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider111.round {
+	  border-radius: 34px;
+	}
+
+	.slider111.round:before {
+	  border-radius: 50%;
+	}
+
+	/*End switch slider*/
+
 	/*-- Fading-Image --*/
 
 	.animated {
@@ -469,6 +562,12 @@ a:focus, a:hover {
   padding-left: 15px;
 }
 
+/* other header */
+.otherheader {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #333333;
+}
 /* Custom page header */
 .header {
   padding-bottom: 20px;
@@ -534,6 +633,7 @@ footer{
 }
 
 /*//Log in end*/
+
 
 /*-- About --*/
 
@@ -716,7 +816,7 @@ h4.modal-title {
 
 .wthreelocationsaits {
 	/*background-color: #FFF;*/
-	padding: 200px 0;
+	padding: 0;
 }
 
 .wthreelocationsaits h3, .agilepackagesw3l h3, .w3portfolioaits h3, .agilecontactw3ls h3 {
@@ -738,7 +838,7 @@ h4.modal-title {
 .wthreelocationsaits .grid {
 	position: relative;
 	-webkit-transition: all 0.5s cubic-bezier(0,0,0.25,1);
-	transition: all 0.5s cubic-bezier(0,0,0.25,1);
+	transition: all 1.5s cubic-bezier(0,0,0.25,1);
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
@@ -1038,15 +1138,15 @@ h4.modal-title {
 }
 
 .wthreelocationsaits figure.effect-zoe h4 {
-	text-align: center;
+	/*text-align: center;*/
 	font-size: 35px;
 	color: #FFF;
-	margin-top: 3.4em;
+	margin-top: 1.4em;
 }
 
 .wthreelocationsaits figure.effect-zoe h4 {
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
+	-webkit-transition: -webkit-transform 0.0s;
+	transition: transform 0.0s;
 	-webkit-transform: translate3d(0,200%,0);
 	transform: translate3d(0,200%,0);
 }
@@ -1054,14 +1154,42 @@ h4.modal-title {
 .wthreelocationsaits figure.effect-zoe:hover figcaption, figure.effect-zoe:hover h4 {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 1.2s;
+	-webkit-transition: -webkit-transform 0.0s;
+	transition: transform 0.0s;
 }
 
 .wthreelocationsaits figure.effect-zoe:hover h4 {
-	-webkit-transition-delay: 0.5s;
-	transition-delay: 0.5s;
+	-webkit-transition-delay: 0.0s;
+	transition-delay: 0.0s;
 }
+
+ /*For button*/
+
+ /*.wthreelocationsaits figure.effect-zoe button {
+ 	text-align: center;
+ 	font-size: 35px;
+ 	color: #FFF;
+ 	margin-top: 3.4em;
+ }*/
+
+ .wthreelocationsaits figure.effect-zoe button {
+ 	-webkit-transition: -webkit-transform 0.0s;
+ 	transition: transform 0.5s;
+ 	-webkit-transform: translate3d(0,200%,0);
+ 	transform: translate3d(0,200%,0);
+ }
+
+ .wthreelocationsaits figure.effect-zoe:hover figcaption, figure.effect-zoe:hover button {
+ 	-webkit-transform: translate3d(0,0,0);
+ 	transform: translate3d(0,0,0);
+ 	-webkit-transition: -webkit-transform 0.5s;
+ 	transition: transform 0.5s;
+ }
+
+ .wthreelocationsaits figure.effect-zoe:hover button {
+ 	-webkit-transition-delay: 0.5s;
+ 	transition-delay: 0.5s;
+ }
 
 /*-- //Locations --*/
 
@@ -2968,6 +3096,7 @@ address {
 	}
 	.w3lsaboutaits-grid-1, .w3lsaboutaits-grid-2 {
 		width: 100%;
+		/*height: 100%;*/
 	}
 	.w3lsaboutaits-grid-1 h3 {
 		margin-bottom: 10px;
